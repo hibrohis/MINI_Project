@@ -376,13 +376,13 @@ export function VoiceChat({ onSessionExpired }: VoiceChatProps) {
   return (
     <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl h-full overflow-hidden min-h-0">
       {/* Left Side: Controls */}
-      <div className="flex-1 flex flex-col items-center p-8 sketchy-border bg-[#fdfbf7] overflow-y-auto min-h-0 w-full">
-        <div className="mb-8 text-center">
+      <div className="flex-1 flex flex-col items-center p-8 sketchy-border bg-[#fdfbf7] overflow-y-auto min-h-0">
+        <div className="mb-8 text-center shrink-0">
           <h2 className="text-3xl font-bold text-[#2c2c2c] mb-2">Rama</h2>
           <p className="text-[#666] text-lg">Have a natural conversation.</p>
         </div>
 
-        <div className="relative flex items-center justify-center w-48 h-48 mb-6">
+        <div className="relative flex items-center justify-center w-48 h-48 mb-6 shrink-0">
           {isConnected && (
             <div className="absolute inset-0 rounded-full border-4 border-dashed border-[#2c2c2c] animate-[spin_10s_linear_infinite]" />
           )}
@@ -412,7 +412,7 @@ export function VoiceChat({ onSessionExpired }: VoiceChatProps) {
           </button>
         </div>
 
-        <div className="flex flex-col items-center justify-center mb-6">
+        <div className="flex flex-col items-center justify-center mb-6 shrink-0">
           <div className="h-6 flex items-center justify-center mb-2">
             {error ? (
               <p className="text-red-500 text-lg font-bold text-center">{error}</p>
@@ -439,7 +439,7 @@ export function VoiceChat({ onSessionExpired }: VoiceChatProps) {
         </div>
 
         {/* Attachment Section */}
-        <div className="w-full flex flex-col items-center mb-6">
+        <div className="w-full flex flex-col items-center mb-6 shrink-0">
           {!referenceImage ? (
             <button 
               onClick={() => fileInputRef.current?.click()}
@@ -473,7 +473,7 @@ export function VoiceChat({ onSessionExpired }: VoiceChatProps) {
         </div>
 
         {/* Settings Panel */}
-        <div className="w-full mt-2 sketchy-border overflow-hidden">
+        <div className="w-full mt-2 sketchy-border overflow-hidden shrink-0">
           <button 
             onClick={() => setShowSettings(!showSettings)}
             className="w-full flex items-center justify-between p-4 text-[#2c2c2c] hover:bg-[#eee] transition-colors"
@@ -554,7 +554,7 @@ export function VoiceChat({ onSessionExpired }: VoiceChatProps) {
       </div>
 
       {/* Right Side: Transcriptions */}
-      <div className="flex-1 flex flex-col p-8 sketchy-border bg-[#fdfbf7] h-full overflow-hidden min-h-0 w-full">
+      <div className="flex-1 flex flex-col p-8 sketchy-border bg-[#fdfbf7] h-full overflow-hidden min-h-0">
         <h3 className="text-3xl font-bold mb-4 border-b-2 border-[#2c2c2c] pb-4 text-[#2c2c2c] shrink-0">Live Transcript</h3>
         <div className="flex-1 overflow-y-auto flex flex-col gap-4 pr-4">
           {transcripts.length === 0 ? (

@@ -57,7 +57,7 @@ export default function App() {
 
   return (
     <div className="h-screen flex flex-col items-center py-6 px-4 font-sans relative overflow-hidden">
-      <div className="relative z-10 w-full max-w-6xl flex flex-col items-center h-full">
+      <div className="relative z-10 w-full max-w-6xl flex flex-col items-center h-full min-h-0">
         <div className="flex gap-4 mb-6 shrink-0">
           <button
             onClick={() => setActiveTab('voice')}
@@ -79,7 +79,7 @@ export default function App() {
           </button>
         </div>
 
-        <main className="w-full flex-1 flex justify-center overflow-hidden">
+        <main className="w-full flex-1 flex justify-center overflow-hidden min-h-0">
           {activeTab === 'voice' ? (
             <VoiceChat onSessionExpired={() => setIsAuthenticated(false)} />
           ) : (
