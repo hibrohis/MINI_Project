@@ -374,9 +374,9 @@ export function VoiceChat({ onSessionExpired }: VoiceChatProps) {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl h-full overflow-hidden">
+    <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl h-full overflow-hidden min-h-0">
       {/* Left Side: Controls */}
-      <div className="flex-1 flex flex-col items-center p-8 sketchy-border bg-[#fdfbf7] overflow-y-auto">
+      <div className="flex-1 flex flex-col items-center p-8 sketchy-border bg-[#fdfbf7] overflow-y-auto min-h-0 w-full">
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-bold text-[#2c2c2c] mb-2">Rama</h2>
           <p className="text-[#666] text-lg">Have a natural conversation.</p>
@@ -554,7 +554,7 @@ export function VoiceChat({ onSessionExpired }: VoiceChatProps) {
       </div>
 
       {/* Right Side: Transcriptions */}
-      <div className="flex-1 flex flex-col p-8 sketchy-border bg-[#fdfbf7] h-full overflow-hidden">
+      <div className="flex-1 flex flex-col p-8 sketchy-border bg-[#fdfbf7] h-full overflow-hidden min-h-0 w-full">
         <h3 className="text-3xl font-bold mb-4 border-b-2 border-[#2c2c2c] pb-4 text-[#2c2c2c] shrink-0">Live Transcript</h3>
         <div className="flex-1 overflow-y-auto flex flex-col gap-4 pr-4">
           {transcripts.length === 0 ? (
