@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Patrick Hand", cursive, system-ui, sans-serif;
+}
+
+body {
+  background-color: #fdfbf7;
+  color: #2c2c2c;
+  background-image: 
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 2rem;
+  font-family: "Patrick Hand", cursive;
+}
+
+.sketchy-border {
+  border: 2px solid #2c2c2c;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+.sketchy-button {
+  border: 2px solid #2c2c2c;
+  border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.sketchy-button:hover:not(:disabled) {
+  background: #2c2c2c;
+  color: #fdfbf7;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+.sketchy-button:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+}
+
+.sketchy-input {
+  border: 2px solid #2c2c2c;
+  border-radius: 225px 15px 255px 15px/15px 255px 15px 225px;
+  background: transparent;
+}

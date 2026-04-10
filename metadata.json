@@ -1,0 +1,8 @@
+{
+  "name": "Mini Project",
+  "description": "A voice-to-voice conversational AI and image analysis app using Gemini.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
